@@ -53,6 +53,12 @@
 #define DUMMY_DATA       (0x55UL)
 #define TX_DELAY_MS      (500u)
 
+#ifdef  COMPONENT_PSOC4100SP256KB
+#define SMARTIO_PORT     PRGIO_PRT1
+#else
+#define SMARTIO_PORT     PRGIO_PRT0
+#endif
+
 /*******************************************************************************
  * Global Variables
  ********************************************************************************/
@@ -73,13 +79,13 @@ cy_stc_scb_spi_context_t mSPI_context;
 void SmartIO_Start(void)
 {
     /* Configure the Smart I/O */
-    if(CY_SMARTIO_SUCCESS != Cy_SmartIO_Init(PRGIO_PRT0, &SmartIO_config))
+    if(CY_SMARTIO_SUCCESS != Cy_SmartIO_Init(SMARTIO_PORT, &SmartIO_config))
     {
         CY_ASSERT(0);
     }
 
     /* Enable Smart I/O */
-    Cy_SmartIO_Enable(PRGIO_PRT0);
+    Cy_SmartIO_Enable(SMARTIO_PORT);
 }
 
 /*******************************************************************************
