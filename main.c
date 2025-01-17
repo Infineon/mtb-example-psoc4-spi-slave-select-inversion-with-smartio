@@ -2,13 +2,13 @@
  * File Name:   main.c
  *
  * Description: This is the source code for the Slave select inversion
- * with smart IO PSoC 4 application for ModusToolbox.
+ * with smart IO PSoC 4 application for ModusToolbox
  *
- * Related Document: See README.md
+ * Related Document: See README.md 
  *
  *
  *******************************************************************************
- * Copyright 2023, Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2023-2024, Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
  *
  * This software, including source code, documentation and related
@@ -53,7 +53,7 @@
 #define DUMMY_DATA       (0x55UL)
 #define TX_DELAY_MS      (500u)
 
-#ifdef  COMPONENT_PSOC4100SP256KB
+#if defined  COMPONENT_PSOC4100SP256KB || COMPONENT_PSOC4HVMS128K || COMPONENT_PSOC4HVMS64K
 #define SMARTIO_PORT     PRGIO_PRT1
 #else
 #define SMARTIO_PORT     PRGIO_PRT0
