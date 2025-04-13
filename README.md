@@ -1,18 +1,18 @@
-# PSoC&trade; 4 : SPI slave select inversion with smart IO
+# PSOC&trade; 4 : SPI slave select inversion with smart IO
 
-This example demonstrates how to use the smart IO peripheral in PSoC&trade; 4 to invert the output of the serial communication block (SCB) SPI slave select signal. This method can be used for any of the SCB unidirectional signals to invert the signal polarity.
+This example demonstrates how to use the smart IO peripheral in PSOC&trade; 4 to invert the output of the serial communication block (SCB) SPI slave select signal. This method can be used for any of the SCB unidirectional signals to invert the signal polarity.
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc4-spi-slave-select-inversion-with-smartio)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzY3MTIiLCJTcGVjIE51bWJlciI6IjAwMi0zNjcxMiIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQgOiBTUEkgc2xhdmUgc2VsZWN0IGludmVyc2lvbiB3aXRoIHNtYXJ0IElPIiwicmlkIjoicmFqYW5uYWdhdXRhIiwiRG9jIHZlcnNpb24iOiIxLjIuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzY3MTIiLCJTcGVjIE51bWJlciI6IjAwMi0zNjcxMiIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IDQgOiBTUEkgc2xhdmUgc2VsZWN0IGludmVyc2lvbiB3aXRoIHNtYXJ0IElPIiwicmlkIjoicmFqYW5uYWdhdXRhIiwiRG9jIHZlcnNpb24iOiIxLjMuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.4 or later (tested with v3.4)
 
 - Board support package (BSP) minimum required version: 3.1.0
 - Programming language: C
-- Associated parts: [PSoC&trade; 4000S, PSoC&trade; 4100S Plus, PSoC&trade; 4500S, PSoC&trade; 4100S Max](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-4-32-bit-arm-cortex-m0-mcu/) and [ PSoC&trade; 4 HV (High Voltage)](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/32-bit-psoc-4-hv-arm-cortex-m0/) 
+- Associated parts: [PSOC&trade; 4000S, PSOC&trade; 4100S Plus, PSOC&trade; 4500S, PSOC&trade; 4100S Max](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-4-32-bit-arm-cortex-m0-mcu/) and [ PSOC&trade; 4 HV (High Voltage)](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/32-bit-psoc-4-hv-arm-cortex-m0/) 
 
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
@@ -23,12 +23,12 @@ This example demonstrates how to use the smart IO peripheral in PSoC&trade; 4 to
 
 ## Supported kits (make variable 'TARGET')
 
-- [PSoC&trade; 4100S Max Pioneer Kit](https://www.infineon.com/CY8CKIT-041S-MAX) (`CY8CKIT-041S-MAX`) - Default value of `TARGET`
-- [PSoC&trade; 4100S Plus Prototyping Kit](https://www.infineon.com/CY8CKIT-149) (`CY8CKIT-149`)
-- [PSoC&trade; 4000S CAPSENSE&trade; Prototyping Kit](https://www.infineon.com/CY8CKIT-145-40XX) (`CY8CKIT-145-40XX`)
-- [PSoC&trade; 4500S Pioneer Kit](https://www.infineon.com/CY8CKIT-045S) (`CY8CKIT-045S`)
-- [PSoC&trade; 4 HVMS-128K Evaluation Kit](https://www.infineon.com/KIT_PSoC4-HVMS-128K_LITE) (`KIT_PSoC4-HVMS-128K_LITE`)
-- [PSoC&trade; 4 HVMS-64K Evaluation Kit](https://www.infineon.com/KIT_PSoC4-HVMS-64K_LITE) (`KIT_PSoC4-HVMS-64K_LITE`)
+- [PSOC&trade; 4100S Max Pioneer Kit](https://www.infineon.com/CY8CKIT-041S-MAX) (`CY8CKIT-041S-MAX`) - Default value of `TARGET`
+- [PSOC&trade; 4100S Plus Prototyping Kit](https://www.infineon.com/CY8CKIT-149) (`CY8CKIT-149`)
+- [PSOC&trade; 4000S CAPSENSE&trade; Prototyping Kit](https://www.infineon.com/CY8CKIT-145-40XX) (`CY8CKIT-145-40XX`)
+- [PSOC&trade; 4500S Pioneer Kit](https://www.infineon.com/CY8CKIT-045S) (`CY8CKIT-045S`)
+- [PSOC&trade; 4 HVMS-128K Evaluation Kit](https://www.infineon.com/KIT_PSOC4-HVMS-128K_LITE) (`KIT_PSoC4-HVMS-128K_LITE`)
+- [PSOC&trade; 4 HVMS-64K Evaluation Kit](https://www.infineon.com/KIT_PSOC4-HVMS-64K_LITE) (`KIT_PSoC4-HVMS-64K_LITE`)
 
 ## Hardware setup
 
@@ -40,7 +40,7 @@ This example uses the board's default configuration. See the kit guide to ensure
 
 2. For [CY8CKIT-045S](https://www.infineon.com/CY8CKIT-045S), connect SS0_Pin [P3.4] and SS1_Pin [P3.5] to an oscilloscope.
 
-> **Note:** Some of the PSoC&trade; 4 kits ship with KitProg2 installed. ModusToolbox&trade; requires KitProg3. Before using this code example, make sure that the board is upgraded to KitProg3. The tool and instructions are available in the [Firmware Loader](https://github.com/Infineon/Firmware-loader) GitHub repository. If you do not upgrade, you will see an error like "unable to find CMSIS-DAP device" or "KitProg firmware is out of date".
+> **Note:** Some of the PSOC&trade; 4 kits ship with KitProg2 installed. ModusToolbox&trade; requires KitProg3. Before using this code example, make sure that the board is upgraded to KitProg3. The tool and instructions are available in the [Firmware Loader](https://github.com/Infineon/Firmware-loader) GitHub repository. If you do not upgrade, you will see an error like "unable to find CMSIS-DAP device" or "KitProg firmware is out of date".
 
 ## Software setup
 
@@ -221,7 +221,7 @@ The firmware for the peripheral is implemented in main.c and perform the followi
 3. Selects the slave on ss1 sends sample data
 4. Selects the slave on ss2 sends sample data
 
-This code example is designed for the specified ports on the stated devices. The design is portable to other PSoC&trade; 4 devices with smart IO, but it may require LUT reconfiguration due to the close relationship between the device port and the peripheral.
+This code example is designed for the specified ports on the stated devices. The design is portable to other PSOC&trade; 4 devices with smart IO, but it may require LUT reconfiguration due to the close relationship between the device port and the peripheral.
 
 > **Note:** SCB connections use a dedicated channel and cannot be routed to other GPIO pins using the smart IO peripheral. If an SCB connection is located on chip then it must connect to gpio4.
 
@@ -254,12 +254,12 @@ The smart IO peripheral is configured to route chip4 to gpio4 through LUT4, as s
 
 Resources  | Links
 -----------|----------------------------------
-Application notes  | [AN79953](https://www.infineon.com/AN79953) – Getting started with PSoC&trade; 4
+Application notes  | [AN79953](https://www.infineon.com/AN79953) – Getting started with PSOC&trade; 4
 Code examples  | [Using ModusToolbox&trade;](https://github.com/Infineon/Code-Examples-for-ModusToolbox-Software) on GitHub
-Device documentation | [PSoC&trade; 4 datasheets](https://www.infineon.com/cms/en/search.html#!view=downloads&term=psoc4&doc_group=Data%20Sheet) <br>[PSoC&trade; 4 technical reference manuals](https://www.infineon.com/cms/en/search.html#!view=downloads&term=psoc4&doc_group=Additional%20Technical%20Information)
+Device documentation | [PSOC&trade; 4 datasheets](https://www.infineon.com/cms/en/search.html#!view=downloads&term=psoc4&doc_group=Data%20Sheet) <br>[PSOC&trade; 4 technical reference manuals](https://www.infineon.com/cms/en/search.html#!view=downloads&term=psoc4&doc_group=Additional%20Technical%20Information)
 Development kits | Select your kits from the [Evaluation board finder](https://www.infineon.com/cms/en/design-support/finder-selection-tools/product-finder/evaluation-board) page.
-Libraries on GitHub | [mtb-pdl-cat2](https://github.com/Infineon/mtb-pdl-cat2) – PSoC&trade; 4 Peripheral Driver Library (PDL)<br> [mtb-hal-cat2](https://github.com/Infineon/mtb-hal-cat2) – Hardware Abstraction Layer (HAL) library
-Tools  | [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) – ModusToolbox&trade; software is a collection of easy-to-use libraries and tools enabling rapid development with Infineon MCUs for applications ranging from wireless and cloud-connected systems, edge AI/ML, embedded sense and control, to wired USB connectivity using PSoC&trade; Industrial/IoT MCUs, AIROC&trade; Wi-Fi and Bluetooth&reg; connectivity devices, XMC&trade; Industrial MCUs, and EZ-USB&trade;/EZ-PD&trade; wired connectivity controllers. ModusToolbox&trade; incorporates a comprehensive set of BSPs, HAL, libraries, configuration tools, and provides support for industry-standard IDEs to fast-track your embedded application development.
+Libraries on GitHub | [mtb-pdl-cat2](https://github.com/Infineon/mtb-pdl-cat2) – PSOC&trade; 4 Peripheral Driver Library (PDL)<br> [mtb-hal-cat2](https://github.com/Infineon/mtb-hal-cat2) – Hardware Abstraction Layer (HAL) library
+Tools  | [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) – ModusToolbox&trade; software is a collection of easy-to-use libraries and tools enabling rapid development with Infineon MCUs for applications ranging from wireless and cloud-connected systems, edge AI/ML, embedded sense and control, to wired USB connectivity using PSOC&trade; Industrial/IoT MCUs, AIROC&trade; Wi-Fi and Bluetooth&reg; connectivity devices, XMC&trade; Industrial MCUs, and EZ-USB&trade;/EZ-PD&trade; wired connectivity controllers. ModusToolbox&trade; incorporates a comprehensive set of BSPs, HAL, libraries, configuration tools, and provides support for industry-standard IDEs to fast-track your embedded application development.
 
 <br>
 
@@ -269,13 +269,14 @@ Infineon provides a wealth of data at [www.infineon.com](https://www.infineon.co
 
 ## Document history
 
-Document title: *CE236712* - *PSoC&trade; 4 : SPI slave select inversion with smart IO*
+Document title: *CE236712* - *PSOC&trade; 4 : SPI slave select inversion with smart IO*
 
  Version | Description of change
  ------- | ---------------------
  1.0.0   | New code example
  1.1.0   | Added support for CY8CKIT-045S and updated to support ModusToolbox&trade; v3.1.
  1.2.0   | Added support for KIT_PSoC4-HVMS-128K_LITE and KIT_PSoC4-HVMS-64K_LITE and updated to support ModusToolbox&trade; v3.2.
+ 1.3.0   | Changed PSoC HV MS kit name to PSOC4 and updated to support ModusToolbox&trade; v3.4.
 <br>
 
 ---------------------------------------------------------
